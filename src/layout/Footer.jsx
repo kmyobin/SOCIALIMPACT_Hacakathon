@@ -28,7 +28,7 @@ function Footer() {
 
 
   return (
-    <nav className="flex h-20 w-full items-center p-[8%] bg-[rgba(100,100,100,0)]">
+    <nav className="flex h-20 w-full items-center p-[8%] bg-[#f6f6f6]">
       <div className="flex justify-between w-full ">
         {Lo.includes("history") ? (
           <img src={nav_1_click} alt="nav_1_click" width={25} height={25} />
