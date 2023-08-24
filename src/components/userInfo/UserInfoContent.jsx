@@ -46,7 +46,7 @@ const SimpleSlider = () => {
           />
           <div className="w-full h-[70%] absolute bottom-0 bg-[#F6F6F6] rounded-2xl flex flex-col">
             <div className="absolute w-[254px] h-14 bg-white rounded-full shadow-lg ml-24 -top-[28px] flex justify-center items-center text-2xl font-bold">
-              권태훈 (68세)
+              유종건 (68세)
             </div>
             <div className="w-4/5 h-16 shadow-lg mx-auto mt-12 mb-6 rounded-2xl flex items-center pl-4 gap-4">
               <img src={location} alt="location" className="-ml-1 -mr-2" />
@@ -89,7 +89,7 @@ const SimpleSlider = () => {
             className="m-auto mt-8 w-20"
           />
           <div className="flex flex-col items-center text-white mt-6">
-            <h2 className="text-2xl font-bold">권태훈 (68세)</h2>
+            <h2 className="text-2xl font-bold">유종건 (68세)</h2>
             <p>인천광역시 미추홀구 용현1동</p>
           </div>
           <div className="w-full h-[70%] absolute bottom-0 bg-[#F6F6F6] rounded-2xl">

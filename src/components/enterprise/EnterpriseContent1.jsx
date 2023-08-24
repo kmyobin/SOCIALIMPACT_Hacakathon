@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
-import Footer from '../../layout/Footer';
+import React, { useState } from "react";
+import Footer from "../../layout/Footer";
 import ex_intro from "../../assets/ex_intro.mp4";
 import bag from "../../assets/images/icons/ent.svg";
-import AcceptBtn from '../../common/AcceptBtn';
-import list_5 from "../../assets/images/icons/list_5.svg"
-import ent_logo from "../../assets/images/icons/ent_logo.svg"
-import TelPopupContent from './TelPopupContent';
+import AcceptBtn from "../../common/AcceptBtn";
+import list_5 from "../../assets/images/icons/list_5.svg";
+import ent_logo from "../../assets/images/icons/ent_logo.svg";
+import TelPopupContent from "./TelPopupContent";
 
 function EnterpriseContent1() {
   const [popOpen, setPopOpen] = useState(false);
   const onClickContact = () => {
     setPopOpen(true);
-  }
-  
+  };
+
   return (
     <section className="relative w-full h-[742px]">
       <div className="">
@@ -88,12 +88,12 @@ function EnterpriseContent1() {
             </div>
           </div>
           <div className="absolute bottom-12 right-5">
-              <button
-                onClick={onClickContact}
-                className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out"
-              >
-                연락하기
-              </button>
+            <button
+              onClick={onClickContact}
+              className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out"
+            >
+              연락하기
+            </button>
           </div>
         </div>
       </div>
@@ -101,4 +101,4 @@ function EnterpriseContent1() {
   );
 }
 
-export default EnterpriseContent1
+export default EnterpriseContent1;

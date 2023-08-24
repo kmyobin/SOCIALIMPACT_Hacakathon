@@ -1,13 +1,13 @@
-import React from 'react'
-import Footer from '../../layout/Footer';
-import profile from "../../assets/images/profile.jpg"
-import profile2 from "../../assets/images/profile_2.png"
-import arrow from "../../assets/images/icons/before_arrow.svg"
-import next_arrow from "../../assets/images/icons/next_arrow.svg"
+import React from "react";
+import Footer from "../../layout/Footer";
+import profile from "../../assets/images/profile.jpg";
+import profile2 from "../../assets/images/profile_2.png";
+import arrow from "../../assets/images/icons/before_arrow.svg";
+import next_arrow from "../../assets/images/icons/next_arrow.svg";
 function HistoryContent() {
-    const onClickArrow = () => {
-      console.log("뒤로가기");
-    };
+  const onClickArrow = () => {
+    console.log("뒤로가기");
+  };
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
@@ -75,7 +75,7 @@ function HistoryContent() {
                   </div>
                   <div className="w-2/4 p-3">
                     <div>
-                      <span className="text-lg font-extrabold">권태훈</span>
+                      <span className="text-lg font-extrabold">유종건</span>
                       &nbsp;(68세)
                     </div>
                     <div className=" text-[#505050] text-sm whitespace-nowrap	">
@@ -101,4 +101,4 @@ function HistoryContent() {
   );
 }
 
-export default HistoryContent
+export default HistoryContent;
