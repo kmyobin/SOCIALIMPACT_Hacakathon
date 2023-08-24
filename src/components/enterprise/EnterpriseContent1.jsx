@@ -16,7 +16,7 @@ function EnterpriseContent1() {
   return (
     <section className="relative w-full h-[742px]">
       <div className="">
-        {popOpen && <TelPopupContent setPopOpen={setPopOpen} name={"권태훈"} />}
+        {popOpen && <TelPopupContent setPopOpen={setPopOpen} name={"유종건"} />}
       </div>
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
         <div className="w-full h-[210px] z-0">
@@ -30,7 +30,7 @@ function EnterpriseContent1() {
             <img src={ent_logo} alt="ent_logo" width={80} height={80} />
           </div>
           <h1>
-            <span className="text-xl font-bold">권태훈</span>&nbsp;(68세)
+            <span className="text-xl font-bold">유종건</span>&nbsp;(68세)
           </h1>
           <div className="text-[#505050] text-xs py-1 pb-5">
             인천광역시 미추홀구 용현1동

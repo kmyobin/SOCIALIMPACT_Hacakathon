@@ -5,11 +5,16 @@ import profile3 from "../../assets/images/profile_3.svg";
 
 import arrow from "../../assets/images/icons/before_arrow.svg";
 import next_arrow from "../../assets/images/icons/next_arrow.svg";
+import { useNavigate } from "react-router-dom";
 
 function ListContent() {
+  const navigate = useNavigate();
   const onClickArrow = () => {
     console.log("뒤로가기");
   };
+  const onClickProfile = () => {
+    navigate("/enterprise");
+  }
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
@@ -38,36 +43,6 @@ function ListContent() {
                 <div className="flex">
                   <div className="w-1/4 flex justify-center items-center">
                     <img
-                      src={profile}
-                      alt="profile"
-                      className="rounded-full"
-                      width={60}
-                      height={60}
-                    />
-                  </div>
-                  <div className="w-2/4 p-3">
-                    <div>
-                      <span className="text-lg font-extrabold">차은우</span>
-                      &nbsp;(80세)
-                    </div>
-                    <div className=" text-[#505050] text-sm">
-                      서울특별시 광진구
-                    </div>
-                  </div>
-                  <div className="w-1/4 flex justify-end">
-                    <img
-                      src={next_arrow}
-                      alt="next_arrow"
-                      width={15}
-                      height={15}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl p-3 my-5">
-                <div className="flex">
-                  <div className="w-1/4 flex justify-center items-center">
-                    <img
                       src={profile3}
                       alt="profile3"
                       className="rounded-full"
@@ -77,11 +52,11 @@ function ListContent() {
                   </div>
                   <div className="w-2/4 p-3">
                     <div>
-                      <span className="text-lg font-extrabold">권태훈</span>
+                      <span className="text-lg font-extrabold">유종건</span>
                       &nbsp;(68세)
                     </div>
                     <div className=" text-[#505050] text-sm whitespace-nowrap	">
-                      인천광역시 미추홀구 용현4동
+                      인천광역시 미추홀구 용현1동
                     </div>
                   </div>
                   <div className="w-1/4 flex justify-end">
@@ -90,6 +65,7 @@ function ListContent() {
                       alt="next_arrow"
                       width={15}
                       height={15}
+                      onClick={onClickProfile}
                     />
                   </div>
                 </div>
