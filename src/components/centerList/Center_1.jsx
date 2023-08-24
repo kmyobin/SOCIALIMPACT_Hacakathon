@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import center1 from "../../assets/images/centerImages/center1.png";
+import center2 from "../../assets/images/centerImages/center2.png";
 import ApplyBtn from "../common/ApplyBtn";
 import "../../styles/centerIntroduction.css";
 import DetailModal from "./DetailModal";
@@ -12,8 +12,8 @@ export default function Center_1() {
         <DetailModal showDetail={showDetail} setShowDetail={setShowDetail} />
       )}
       <img
-        src={center1}
-        alt="center1"
+        src={center2}
+        alt="center2"
         className={`w-full h-[70%] object-cover transition-all duration-300 ${
           showDetail ? "brightness-50" : "brightness-100"
         }`}
@@ -22,8 +22,8 @@ export default function Center_1() {
         }}
       />
       <div className="m-6">
-        <div className="title">인하영어센터</div>
-        <p className="introduction">인천광역시 미추홀구 용현1동</p>
+        <div className="title">인하대학교</div>
+        <p className="introduction">인천광역시 미추홀구 용현동</p>
       </div>
       <div className="flex justify-center mt-12">
         <ApplyBtn />

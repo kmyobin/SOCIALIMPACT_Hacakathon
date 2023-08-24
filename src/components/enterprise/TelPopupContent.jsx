@@ -1,9 +1,9 @@
-import React from 'react'
-import cancel from "../../assets/images/icons/cancel.svg"
+import React from "react";
+import cancel from "../../assets/images/icons/cancel.svg";
 function TelPopupContent({ setPopOpen }) {
   const onClickCancel = () => {
     setPopOpen(false);
-  }
+  };
   setTimeout(function () {
     const element = document.querySelector(".scale-0");
     if (element) {
@@ -23,11 +23,11 @@ function TelPopupContent({ setPopOpen }) {
           alt="cancel"
           className="absolute top-3 right-3 cursor-pointer"
         />
-        <h1 className="text-[#5BBDF4] font-semibold text-xl">010-0000-0000</h1>
+        <h1 className="text-[#5BBDF4] font-black text-xl">010-0000-0000</h1>
         <div className="mt-2">권태훈 님의 연락처입니다.</div>
       </div>
     </div>
   );
 }
 
-export default TelPopupContent
+export default TelPopupContent;

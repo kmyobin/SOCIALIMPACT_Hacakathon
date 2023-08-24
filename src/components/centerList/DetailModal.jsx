@@ -1,4 +1,8 @@
 import React from "react";
+import age from "../../assets/images/icons/age.svg";
+import career from "../../assets/images/icons/career.svg";
+import money from "../../assets/images/icons/money.svg";
+import calendar from "../../assets/images/icons/calendar.svg";
 
 export default function DetailModal({ showDetail, setShowDetail }) {
   return (
@@ -19,8 +23,27 @@ export default function DetailModal({ showDetail, setShowDetail }) {
       >
         {"시니어 영어 보조 강사를\n모집합니다."}
       </pre>
-      <div className="w-[350px] h-[350px] bg-white m-auto rounded-lg mt-12">
-        급여 뭐시기 근무시간 뭐시기 근무기간 뭐시기
+      <div className="flex flex-col gap-4 m-auto rounded-lg mt-12">
+        <div className="h-16 bg-white w-[90%] ml-5 rounded-2xl flex items-center gap-4">
+          <img src={age} alt="age" className="w-6 ml-[18px]" />
+          <span className="relative top-[2px] font-semibold">50~70대</span>
+        </div>
+        <div className="h-16 bg-white w-[90%] ml-5 rounded-2xl flex items-center gap-4">
+          <img src={career} alt="career" className="w-6 ml-[18px]" />
+          <span className="relative top-[2px] font-semibold">
+            경력 3년 이상
+          </span>
+        </div>
+        <div className="h-16 bg-white w-[90%] ml-5 rounded-2xl flex items-center gap-4">
+          <img src={money} alt="money" className="w-6 ml-[18px]" />
+          <span className="relative top-[2px] font-semibold">9860원(시간)</span>
+        </div>
+        <div className="h-16 bg-white w-[90%] ml-5 rounded-2xl flex items-center gap-4">
+          <img src={calendar} alt="calendar" className="w-6 ml-[18px]" />
+          <span className="relative top-[2px] font-semibold">
+            6개월, 주말 13시~20시
+          </span>
+        </div>
       </div>
     </section>
   );

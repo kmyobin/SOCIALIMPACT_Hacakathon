@@ -5,13 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import PageTemplate from "../layout/PageTemplate";
 import Center_1 from "../components/centerList/Center_1";
 import Center_2 from "../components/centerList/Center_2";
-import Center_3 from "../components/centerList/Center_3";
 
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -23,7 +22,6 @@ export default class SimpleSlider extends Component {
             <Slider {...settings}>
               <Center_1 />
               <Center_2 />
-              <Center_3 />
             </Slider>
           </section>
         }
