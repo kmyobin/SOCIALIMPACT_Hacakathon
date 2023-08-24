@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import Header from '../../layout/Header'
 import Webcam from 'react-webcam';
+import Footer from '../../layout/Footer';
 
 function MainContent() {
   const webcamRef = useRef(null);
@@ -33,27 +34,27 @@ function MainContent() {
     document.body.appendChild(a);
     a.style = "display: none";
     a.href = url;
-    a.download = "webcam-recorded.webm";
+    a.download = "1.webm";
     a.click();
     window.URL.revokeObjectURL(url);
   };
 
 
   return (
-    <div className="w-full h-full">
-      <Header />
-      <div
-        className="flex flex-col align items-center	"
-      >
-        <Webcam audio={true} ref={webcamRef} mirrored={true} />
-        {!capturing ? (
-          <button onClick={handleStartCapture}>녹화 시작</button>
-        ) : (
-          <button onClick={handleStopCapture}>녹화 중지</button>
-        )}
-        {recordedChunks.length > 0 && (
-          <button onClick={handleDownload}>다운로드</button>
-        )}
+    <div className="flex h-full w-full flex-wrap justify-center">
+      <div className="relative flex h-full w-full max-w-lg flex-col justify-between overflow-hidden bg-[#ECEFF4]">
+        <div className="h-full w-full overflow-y-auto p-10">
+          <Webcam audio={true} ref={webcamRef} mirrored={false} />
+          {!capturing ? (
+            <button onClick={handleStartCapture}>녹화 시작</button>
+          ) : (
+            <button onClick={handleStopCapture}>녹화 중지</button>
+          )}
+          {recordedChunks.length > 0 && (
+            <button onClick={handleDownload}>다운로드</button>
+          )}
+        </div>
+        <Footer />
       </div>
     </div>
   );
