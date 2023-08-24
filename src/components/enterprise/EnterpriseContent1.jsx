@@ -7,15 +7,17 @@ import list_5 from "../../assets/images/icons/list_5.svg"
 import ent_logo from "../../assets/images/icons/ent_logo.svg"
 import TelPopupContent from './TelPopupContent';
 
-function EnterpriseContent() {
+function EnterpriseContent1() {
   const [popOpen, setPopOpen] = useState(false);
   const onClickContact = () => {
     setPopOpen(true);
   }
   
   return (
-    <div className="flex h-full w-full flex-wrap justify-center">
-      <div className="">{popOpen && <TelPopupContent setPopOpen={setPopOpen} />}</div>
+    <section className="relative w-full h-[742px]">
+      <div className="">
+        {popOpen && <TelPopupContent setPopOpen={setPopOpen} name={"권태훈"} />}
+      </div>
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
         <div className="w-full h-[210px] z-0">
           <video preload="metadata" controls className="w-screen">
@@ -85,18 +87,18 @@ function EnterpriseContent() {
               </div>
             </div>
           </div>
-          <div className="pt-4">
-            <div className="flex justify-end">
-              <button onClick={onClickContact} className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out">
+          <div className="absolute bottom-12 right-5">
+              <button
+                onClick={onClickContact}
+                className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out"
+              >
                 연락하기
               </button>
-            </div>
           </div>
         </div>
-        <Footer />
       </div>
-    </div>
+    </section>
   );
 }
 
-export default EnterpriseContent
+export default EnterpriseContent1
