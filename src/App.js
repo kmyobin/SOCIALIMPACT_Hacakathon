@@ -8,6 +8,7 @@ import MypagePage from "./pages/MypagePage";
 import "./App.css";
 import CarouselTest from "../src/pages/CarouselTest";
 import SelectCategoryPage from "./pages/SelectCategoryPage";
+import FilmingPage from "./pages/FilmingPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/selectcategory" element={<SelectCategoryPage />} />
+        <Route path="/filming" element={<FilmingPage />} />
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/list" element={<ListPage />} />
         <Route path="/enterprise" element={<EnterprisePage />} />

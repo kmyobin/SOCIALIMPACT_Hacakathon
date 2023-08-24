@@ -19,3 +19,11 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+video {
+  height: 75vh;
+  object-fit: cover;
+  position: absolute;
+  margin-top: -600px;
+  z-index: -1;
+}

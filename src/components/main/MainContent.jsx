@@ -1,7 +1,6 @@
-import React, {useRef, useEffect, useState} from 'react'
-import Header from '../../layout/Header'
-import Webcam from 'react-webcam';
-import Footer from '../../layout/Footer';
+import React, { useRef, useEffect, useState } from "react";
+import Webcam from "react-webcam";
+import Footer from "../../layout/Footer";
 
 function MainContent() {
   const webcamRef = useRef(null);
@@ -39,7 +38,6 @@ function MainContent() {
     window.URL.revokeObjectURL(url);
   };
 
-
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
       <div className="relative flex h-full w-full max-w-lg flex-col justify-between overflow-hidden bg-[#ECEFF4]">
@@ -60,4 +58,4 @@ function MainContent() {
   );
 }
 
-export default MainContent
+export default MainContent;
