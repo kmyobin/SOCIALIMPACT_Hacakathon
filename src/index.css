@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: NotoSans;
+  src: url("../src/assets/fonts/NotoSansKR-Regular.otf") format("truetype");
+}
+
+body {
+  font-family: NotoSans;
+  background-color: #efefef;
+}
+
+#friendList::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
