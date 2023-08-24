@@ -58,7 +58,7 @@ function MypageContent() {
                 </label>
               </div>
             </div>
-            <div className="h-[450px] overflow-y-scroll font-bold">
+            <div className="h-[470px] overflow-y-scroll font-bold">
               <div className="text-[#505050] text-md font-semibold mb-2 px-2">
                 구직자 필터
               </div>
