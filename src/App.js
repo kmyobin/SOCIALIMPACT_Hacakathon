@@ -9,6 +9,7 @@ import "./App.css";
 import CarouselTest from "../src/pages/CarouselTest";
 import SelectCategoryPage from "./pages/SelectCategoryPage";
 import FilmingPage from "./pages/FilmingPage";
+import CompanyPage from "./pages/CompanyPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/enterprise" element={<EnterprisePage />} />
         <Route path="/mypage" element={<MypagePage />} />
         <Route path="/jobseeker" element={<CarouselTest />} />
+        <Route path="/company" element={<CompanyPage/>}/>
       </Routes>
     </BrowserRouter>
   );

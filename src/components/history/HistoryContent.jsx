@@ -24,7 +24,7 @@ function HistoryContent() {
               />
             </div>
             <div className="text-xl w-1/2 flex justify-center items-center text-white text-center font-semibold">
-              조회 기록
+              제의 목록
             </div>
           </div>
           <div
