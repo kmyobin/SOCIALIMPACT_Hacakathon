@@ -10,14 +10,17 @@ import CarouselTest from "../src/pages/CarouselTest";
 import SelectCategoryPage from "./pages/SelectCategoryPage";
 import FilmingPage from "./pages/FilmingPage";
 import CompanyPage from "./pages/CompanyPage";
+import UserInfoPage from "./pages/UserInfoPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        {/* <Route path="/" element={<MainPage />} /> */}
+        <Route path="/" element={<SelectCategoryPage />} />
         <Route path="/selectcategory" element={<SelectCategoryPage />} />
         <Route path="/filming" element={<FilmingPage />} />
+        <Route path="/userinfo" element={<UserInfoPage />} />
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/list" element={<ListPage />} />
         <Route path="/enterprise" element={<EnterprisePage />} />
