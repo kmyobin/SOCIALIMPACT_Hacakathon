@@ -10,6 +10,7 @@
 body {
   font-family: NotoSans;
   background-color: #f6f6f6;
+  color: black;
 }
 
 #friendList::-webkit-scrollbar {
@@ -20,7 +21,7 @@ body {
   display: none;
 }
 
-video {
+.muyaho video {
   height: 75vh;
   object-fit: cover;
   position: absolute;
