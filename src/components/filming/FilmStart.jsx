@@ -17,7 +17,7 @@ export default function FilmStart({ handleNext }) {
       <section className="absolute w-full pt-10 z-10">
         <div className="flex justify-center">
           <button
-            className={`${styles.applyBtn} transition-all hover:scale-105 -mt-6`}
+            className={`${styles.applyBtn} bg-[#5bbdf4] transition-all hover:scale-105 -mt-6`}
             onClick={handleNext}
           >
             다음으로

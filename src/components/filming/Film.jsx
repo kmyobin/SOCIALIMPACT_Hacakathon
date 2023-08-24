@@ -152,7 +152,7 @@ function Film() {
             경력
           </h2>
           <button
-            className={`${styles.applyBtn} transition-all hover:scale-105 -mt-44 ml-[105px]`}
+            className={`${styles.applyBtn} bg-[#5bbdf4] transition-all hover:scale-105 -mt-44 ml-[105px]`}
             onClick={() => {
               navigate("/userinfo");
             }}

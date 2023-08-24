@@ -75,7 +75,7 @@ const SimpleSlider = () => {
               />
             </div>
             <button
-              className={`${styles.applyBtn} transition-all hover:scale-105 ml-[105px] mt-4`}
+              className={`${styles.applyBtn} bg-[#5bbdf4] transition-all hover:scale-105 ml-[105px] mt-4`}
               onClick={next}
             >
               제출하기

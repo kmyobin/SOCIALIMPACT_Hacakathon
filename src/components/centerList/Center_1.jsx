@@ -22,10 +22,10 @@ export default function Center_1() {
         }}
       />
       <div className="m-6">
-        <h2 className="title">인하영어센터</h2>
+        <div className="title">인하영어센터</div>
         <p className="introduction">인천광역시 미추홀구 용현1동</p>
       </div>
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center mt-12">
         <ApplyBtn />
       </div>
     </section>
