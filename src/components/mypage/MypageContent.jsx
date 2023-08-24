@@ -1,20 +1,20 @@
-import React from 'react'
-import Footer from '../../layout/Footer';
+import React from "react";
+import Footer from "../../layout/Footer";
 import arrow from "../../assets/images/icons/before_arrow.svg";
-import company from "../../assets/images/company.png"
-import list_1 from "../../assets/images/icons/list_1.svg"
-import list_2 from "../../assets/images/icons/list_2.svg"
-import list_3 from "../../assets/images/icons/list_3.svg"
-import list_4 from "../../assets/images/icons/ent.svg"
-import list_5 from "../../assets/images/icons/list_5.svg"
-import list_6 from "../../assets/images/icons/list_6.svg"
+import company from "../../assets/images/company.png";
+import list_1 from "../../assets/images/icons/list_1.svg";
+import list_2 from "../../assets/images/icons/list_2.svg";
+import list_3 from "../../assets/images/icons/list_3.svg";
+import list_4 from "../../assets/images/icons/ent.svg";
+import list_5 from "../../assets/images/icons/list_5.svg";
+import list_6 from "../../assets/images/icons/list_6.svg";
 import list_7 from "../../assets/images/icons/list_7.svg";
 import phone from "../../assets/images/icons/phone.svg";
 
 function MypageContent() {
   const onClickArrow = () => {
-    console.log("뒤로가기")
-  }
+    console.log("뒤로가기");
+  };
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
@@ -51,7 +51,7 @@ function MypageContent() {
             <div className="flex justify-end pb-2">
               <div className="form-control">
                 <label className="label cursor-pointer">
-                  <span className="label-text text-md font-semibold pr-2">
+                  <span className="label-text text-md font-semibold pr-2 text-black">
                     취업 신청 받기
                   </span>
                   <input type="checkbox" className="toggle toggle-info" />
@@ -124,4 +124,4 @@ function MypageContent() {
   );
 }
 
-export default MypageContent
+export default MypageContent;
