@@ -50,6 +50,7 @@ function Film() {
   const handleStopCapture = () => {
     setCapturing(false);
     mediaRecorderRef.current.stop();
+    handleDownload();
   };
 
   const handleDownload = () => {
@@ -64,17 +65,16 @@ function Film() {
     window.URL.revokeObjectURL(url);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      alert("촬영시작");
+      handleStartCapture();
+    }, 5000);
+  }, []);
+
   return (
     <div className="w-full h-[814.125px] relative mt-[600px] muyaho">
       <Webcam audio={true} ref={webcamRef} mirrored={true} />
-      {/* {!capturing ? (
-      <button onClick={handleStartCapture}>녹화 시작</button>
-    ) : (
-      <button onClick={handleStopCapture}>녹화 중지</button>
-    )}
-    {recordedChunks.length > 0 && (
-      <button onClick={handleDownload}>다운로드</button>
-    )} */}
       <img
         src={logo}
         alt="logo"
@@ -154,7 +154,11 @@ function Film() {
           <button
             className={`${styles.applyBtn} bg-[#5bbdf4] transition-all hover:scale-105 -mt-44 ml-[105px]`}
             onClick={() => {
-              navigate("/userinfo");
+              handleStopCapture();
+              // handleDownload();
+              setTimeout(() => {
+                navigate("/userinfo");
+              }, 3000);
             }}
           >
             제출하기
