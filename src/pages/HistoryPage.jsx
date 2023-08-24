@@ -1,10 +1,10 @@
 import React from 'react'
+import PageTemplate from '../layout/PageTemplate'
+import HistoryContent from '../components/history/HistoryContent'
 
 function HistoryPage() {
   return (
-    <div>
-      
-    </div>
+    <PageTemplate content={<HistoryContent/>}/>
   )
 }
 

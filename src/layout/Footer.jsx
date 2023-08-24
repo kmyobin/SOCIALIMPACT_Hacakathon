@@ -18,11 +18,11 @@ function Footer() {
     navigate("/list");
   };
   const onClickNav3 = () => {
-    navigate("/mypage");
+    navigate("/enterprise");
 
   };
   const onClickNav4 = () => {
-    navigate("/enterprise");
+    navigate("/mypage");
   };
   const Lo = window.location.href;
 
@@ -31,12 +31,7 @@ function Footer() {
     <nav className="flex h-20 w-full items-center p-[8%] bg-[rgba(100,100,100,0)]">
       <div className="flex justify-between w-full ">
         {Lo.includes("history") ? (
-          <img
-            src={nav_1_click}
-            alt="nav_1_click"
-            width={25}
-            height={25}
-          />
+          <img src={nav_1_click} alt="nav_1_click" width={25} height={25} />
         ) : (
           <img
             src={nav_1}
@@ -48,12 +43,7 @@ function Footer() {
           />
         )}
         {Lo.includes("list") ? (
-          <img
-            src={nav_2_click}
-            alt="nav_2_click"
-            width={25}
-            height={25}
-          />
+          <img src={nav_2_click} alt="nav_2_click" width={25} height={25} />
         ) : (
           <img
             src={nav_2}
@@ -64,13 +54,8 @@ function Footer() {
             className="cursor-pointer transition-all hover:scale-110"
           />
         )}
-        {Lo.includes("mypage") ? (
-          <img
-            src={nav_3_click}
-            alt="nav_3_click"
-            width={25}
-            height={25}
-          />
+        {Lo.includes("enterprise") ? (
+          <img src={nav_3_click} alt="nav_3_click" width={25} height={25} />
         ) : (
           <img
             src={nav_3}
@@ -81,13 +66,8 @@ function Footer() {
             className="cursor-pointer transition-all hover:scale-110"
           />
         )}
-        {Lo.includes("enterprise") ? (
-          <img
-            src={nav_4_click}
-            alt="nav_4_click"
-            width={25}
-            height={25}
-          />
+        {Lo.includes("mypage") ? (
+          <img src={nav_4_click} alt="nav_4_click" width={25} height={25} />
         ) : (
           <img
             src={nav_4}
