@@ -42,7 +42,7 @@ const SimpleSlider = () => {
           <img
             src={handsomeGuy}
             alt="handsomeGuy"
-            className="m-auto mt-16 w-28"
+            className="m-auto mt-16 w-28 rounded-full"
           />
           <div className="w-full h-[70%] absolute bottom-0 bg-[#F6F6F6] rounded-2xl flex flex-col">
             <div className="absolute w-[254px] h-14 bg-white rounded-full shadow-lg ml-24 -top-[28px] flex justify-center items-center text-2xl font-bold">
@@ -86,7 +86,7 @@ const SimpleSlider = () => {
           <img
             src={handsomeGuy}
             alt="handsomeGuy"
-            className="m-auto mt-8 w-20"
+            className="m-auto mt-8 w-20 rounded-full"
           />
           <div className="flex flex-col items-center text-white mt-6">
             <h2 className="text-2xl font-bold">유종건 (68세)</h2>

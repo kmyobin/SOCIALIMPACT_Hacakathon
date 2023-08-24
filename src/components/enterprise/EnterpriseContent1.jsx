@@ -6,6 +6,7 @@ import AcceptBtn from "../../common/AcceptBtn";
 import list_5 from "../../assets/images/icons/list_5.svg";
 import ent_logo from "../../assets/images/icons/ent_logo.svg";
 import TelPopupContent from "./TelPopupContent";
+import cutyGuy from "../../assets/cutyGuy.mp4";
 
 function EnterpriseContent1() {
   const [popOpen, setPopOpen] = useState(false);
@@ -21,11 +22,11 @@ function EnterpriseContent1() {
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
         <div className="w-full h-[210px] z-0">
           <video preload="metadata" controls className="w-screen">
-            <source src={ex_intro} type="video/mp4" />
+            <source src={cutyGuy} type="video/mp4" />
           </video>
         </div>
 
-        <div className="rounded-t-xl px-8 pt-10 w-full h-full bg-[#F6F6F6] z-10 relative">
+        <div className="rounded-t-xl px-8 pt-10 w-full h-[480px] bg-[#F6F6F6] z-10 relative">
           <div className="z-20 absolute right-12 -top-9">
             <img src={ent_logo} alt="ent_logo" width={80} height={80} />
           </div>
@@ -87,7 +88,7 @@ function EnterpriseContent1() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-12 right-5">
+          <div className="absolute bottom-[80px] right-10">
             <button
               onClick={onClickContact}
               className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out"

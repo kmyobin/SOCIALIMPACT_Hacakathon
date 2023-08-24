@@ -72,11 +72,11 @@ function Film() {
   return (
     <div className="w-full h-[814.125px] relative mt-[600px] muyaho">
       <Webcam audio={true} ref={webcamRef} mirrored={true} />
-      <img
+      {/* <img
         src={logo}
         alt="logo"
         className="absolute animate-pulse left-44 top-[460px] -mt-[600px]"
-      />
+      /> */}
       <Slider {...settings} ref={sliderRef}>
         <div className="w-full h-56 rounded-2xl flex flex-col items-center bg-white relative">
           <h2 className="text-center text-2xl font-bold mt-6 mb-10">

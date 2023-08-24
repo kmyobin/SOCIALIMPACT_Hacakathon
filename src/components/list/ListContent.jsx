@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../../layout/Footer";
 import profile from "../../assets/images/profile.jpg";
 import profile3 from "../../assets/images/profile_3.svg";
+import handsomeGuy from "../../assets/images/handsomeGuy.png";
 
 import arrow from "../../assets/images/icons/before_arrow.svg";
 import next_arrow from "../../assets/images/icons/next_arrow.svg";
@@ -14,7 +15,7 @@ function ListContent() {
   };
   const onClickProfile = () => {
     navigate("/enterprise");
-  }
+  };
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
@@ -39,12 +40,15 @@ function ListContent() {
             style={{ boxShadow: "0px -3px 0px 0px rgba(0,0,0,0.1)" }}
           >
             <div>
-              <div className="bg-white rounded-xl p-3 my-5">
+              <div
+                className="bg-white rounded-xl p-3 my-5 cursor-pointer transition-all hover:scale-105"
+                onClick={onClickProfile}
+              >
                 <div className="flex">
                   <div className="w-1/4 flex justify-center items-center">
                     <img
-                      src={profile3}
-                      alt="profile3"
+                      src={handsomeGuy}
+                      alt="handsomeGuy"
                       className="rounded-full"
                       width={60}
                       height={60}
@@ -65,7 +69,6 @@ function ListContent() {
                       alt="next_arrow"
                       width={15}
                       height={15}
-                      onClick={onClickProfile}
                     />
                   </div>
                 </div>
