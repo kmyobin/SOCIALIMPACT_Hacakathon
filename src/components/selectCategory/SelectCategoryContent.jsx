@@ -28,7 +28,12 @@ export default function SelectCategoryContent() {
           <img src={personal} alt="personal" />
           <div className="text-2xl font-bold">구직자(개인)</div>
         </button>
-        <button className="w-[400px] h-[200px] border-4 border-[#505050] rounded-xl transition-all absolute top-80 left-6 bg-white flex justify-between px-14 items-center hover:border-[#5BBDF4] hover:scale-105">
+        <button
+          className="w-[400px] h-[200px] border-4 border-[#505050] rounded-xl transition-all absolute top-80 left-6 bg-white flex justify-between px-14 items-center hover:border-[#5BBDF4] hover:scale-105"
+          onClick={() => {
+            navigate("/mypage");
+          }}
+        >
           <img src={community} alt="community" />
           <div className="text-2xl font-bold">기업(단체)</div>
         </button>
