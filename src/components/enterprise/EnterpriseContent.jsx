@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
-import Footer from '../../layout/Footer';
+import React, { useState } from "react";
+import Footer from "../../layout/Footer";
 import ex_intro from "../../assets/ex_intro.mp4";
 import bag from "../../assets/images/icons/ent.svg";
-import AcceptBtn from '../../common/AcceptBtn';
-import list_5 from "../../assets/images/icons/list_5.svg"
-import ent_logo from "../../assets/images/icons/ent_logo.svg"
-import TelPopupContent from './TelPopupContent';
+import AcceptBtn from "../../common/AcceptBtn";
+import list_5 from "../../assets/images/icons/list_5.svg";
+import ent_logo from "../../assets/images/icons/ent_logo.svg";
+import TelPopupContent from "./TelPopupContent";
 
 function EnterpriseContent() {
   const [popOpen, setPopOpen] = useState(false);
   const onClickContact = () => {
     setPopOpen(true);
-  }
-  
+  };
+
   return (
     <div className="flex h-full w-full flex-wrap justify-center">
-      <div className="">{popOpen && <TelPopupContent setPopOpen={setPopOpen} />}</div>
+      <div className="">
+        {popOpen && <TelPopupContent setPopOpen={setPopOpen} />}
+      </div>
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#f6f6f6]">
         <div className="w-full h-[210px] z-0">
           <video preload="metadata" controls className="w-screen">
@@ -28,7 +30,7 @@ function EnterpriseContent() {
             <img src={ent_logo} alt="ent_logo" width={80} height={80} />
           </div>
           <h1>
-            <span className="text-xl font-bold">권태훈</span>&nbsp;(68세)
+            <span className="text-xl font-bold">유종건</span>&nbsp;(68세)
           </h1>
           <div className="text-[#505050] text-xs py-1 pb-5">
             인천광역시 미추홀구 용현1동
@@ -87,7 +89,10 @@ function EnterpriseContent() {
           </div>
           <div className="pt-4">
             <div className="flex justify-end">
-              <button onClick={onClickContact} className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out">
+              <button
+                onClick={onClickContact}
+                className="shadow-md shadow-gray-400 w-[140px] h-[35px] p-1 rounded-3xl bg-[#5BBDF4] text-xs font-semibold text-white flex justify-center items-center hover:scale-105  transition-transform duration-200 ease-in-out"
+              >
                 연락하기
               </button>
             </div>
@@ -99,4 +104,4 @@ function EnterpriseContent() {
   );
 }
 
-export default EnterpriseContent
+export default EnterpriseContent;

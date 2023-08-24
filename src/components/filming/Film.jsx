@@ -8,6 +8,7 @@ import rightArrow from "../../assets/images/icons/rightArrow.svg";
 import mic from "../../assets/images/icons/mic.svg";
 import styles from "../../styles/ApplyBtn.module.css";
 import { useNavigate } from "react-router-dom";
+import hi from "../../assets/images/loading.gif";
 
 function Film() {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ function Film() {
   const previous = () => {
     sliderRef.current.slickPrev();
   };
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   const settings = {
     dots: false,
@@ -54,23 +57,17 @@ function Film() {
   };
 
   const handleDownload = () => {
-    const blob = new Blob(recordedChunks, { type: "video/webm" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    document.body.appendChild(a);
-    a.style = "display: none";
-    a.href = url;
-    a.download = "1.webm";
-    a.click();
-    window.URL.revokeObjectURL(url);
+    console.log(recordedChunks);
+    // const blob = new Blob(recordedChunks, { type: "video/webm" });
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement("a");
+    // document.body.appendChild(a);
+    // a.style = "display: none";
+    // a.href = url;
+    // a.download = "1.webm";
+    // a.click();
+    // window.URL.revokeObjectURL(url);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      alert("촬영시작");
-      handleStartCapture();
-    }, 5000);
-  }, []);
 
   return (
     <div className="w-full h-[814.125px] relative mt-[600px] muyaho">
@@ -82,7 +79,7 @@ function Film() {
       />
       <Slider {...settings} ref={sliderRef}>
         <div className="w-full h-56 rounded-2xl flex flex-col items-center bg-white relative">
-          <h2 className="text-center text-2xl font-bold mt-4 mb-10">
+          <h2 className="text-center text-2xl font-bold mt-6 mb-10">
             정보를 말씀해주세요.
           </h2>
           <h2 className="text-center text-3xl font-bold text-[#5BBDF4] mb-10">
@@ -91,7 +88,7 @@ function Film() {
           <img
             src={mic}
             alt="mic"
-            className="m-auto w-8 cursor-pointer transition-all hover:scale-110"
+            className="m-auto w-8 cursor-pointer transition-all hover:scale-110 -mt-2"
           />
           <button
             onClick={() => {
@@ -103,7 +100,7 @@ function Film() {
           </button>
         </div>
         <div className="w-full h-56 rounded-2xl flex flex-col items-center bg-white relative">
-          <h2 className="text-center text-2xl font-bold mt-4 mb-10">
+          <h2 className="text-center text-2xl font-bold mt-6 mb-10">
             정보를 말씀해주세요.
           </h2>
           <h2 className="text-center text-3xl font-bold text-[#5BBDF4] mb-10">
@@ -112,7 +109,7 @@ function Film() {
           <img
             src={mic}
             alt="mic"
-            className="m-auto w-8 cursor-pointer transition-all hover:scale-110"
+            className="m-auto w-8 cursor-pointer transition-all hover:scale-110 -mt-2"
           />
           <button
             onClick={() => {
@@ -124,7 +121,7 @@ function Film() {
           </button>
         </div>
         <div className="w-full h-56 rounded-2xl flex flex-col items-center bg-white relative">
-          <h2 className="text-center text-2xl font-bold mt-4 mb-10">
+          <h2 className="text-center text-2xl font-bold mt-6 mb-10">
             정보를 말씀해주세요.
           </h2>
           <h2 className="text-center text-3xl font-bold text-[#5BBDF4] mb-10">
@@ -133,7 +130,7 @@ function Film() {
           <img
             src={mic}
             alt="mic"
-            className="m-auto w-8 cursor-pointer transition-all hover:scale-110"
+            className="m-auto w-8 cursor-pointer transition-all hover:scale-110 -mt-2"
           />
           <button
             onClick={() => {
@@ -145,23 +142,30 @@ function Film() {
           </button>
         </div>
         <div className="w-full h-56 rounded-2xl flex flex-col items-center bg-white relative">
-          <h2 className="text-center text-2xl font-bold mt-4 mb-10">
+          <h2 className="text-center text-2xl font-bold mt-6 mb-10">
             정보를 말씀해주세요.
           </h2>
-          <h2 className="text-center text-3xl font-bold text-[#5BBDF4] mb-10">
-            경력
+          <h2
+            className={`text-center text-3xl font-bold text-[#5BBDF4] -mt-2 mb-8 ${
+              modalOpen && "text-[24px]"
+            }`}
+          >
+            {modalOpen ? "잠시만 기다려주세요..." : "경력"}
           </h2>
           <button
             className={`${styles.applyBtn} bg-[#5bbdf4] transition-all hover:scale-105 -mt-44 ml-[105px]`}
             onClick={() => {
-              handleStopCapture();
-              // handleDownload();
+              setModalOpen(true);
               setTimeout(() => {
                 navigate("/userinfo");
-              }, 3000);
+              }, 5000);
             }}
           >
-            제출하기
+            {modalOpen ? (
+              <img src={hi} className="w-12 absolute left-[95px] top-1 z-40" />
+            ) : (
+              "제출하기"
+            )}
           </button>
         </div>
       </Slider>

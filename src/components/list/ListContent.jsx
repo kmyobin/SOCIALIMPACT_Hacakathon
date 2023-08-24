@@ -77,7 +77,7 @@ function ListContent() {
                   </div>
                   <div className="w-2/4 p-3">
                     <div>
-                      <span className="text-lg font-extrabold">권태훈</span>
+                      <span className="text-lg font-extrabold">유종건</span>
                       &nbsp;(68세)
                     </div>
                     <div className=" text-[#505050] text-sm whitespace-nowrap	">

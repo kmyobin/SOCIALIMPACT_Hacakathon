@@ -24,7 +24,7 @@ function TelPopupContent({ setPopOpen }) {
           className="absolute top-3 right-3 cursor-pointer"
         />
         <h1 className="text-[#5BBDF4] font-black text-xl">010-0000-0000</h1>
-        <div className="mt-2">권태훈 님의 연락처입니다.</div>
+        <div className="mt-2">유종건 님의 연락처입니다.</div>
       </div>
     </div>
   );
